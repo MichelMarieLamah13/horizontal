@@ -17,6 +17,7 @@ export interface MainMenuItems {
   state: string;
   short_label?: string;
   main_state?: string;
+  external?:string;
   target?: boolean;
   name: string;
   type: string;

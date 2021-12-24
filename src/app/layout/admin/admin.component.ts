@@ -223,11 +223,13 @@ export class AdminComponent implements OnInit {
       search_input = (elements.innerHTML).toLowerCase();
       search_parent = (elements.parentNode).parentNode;
       if (search_input.indexOf(search) !== -1) {
-        search_parent.classList.add('show');
-        search_parent.classList.remove('hide');
+        search_parent.classList.add('d-block'); //class: show
+        search_parent.classList.remove('d-none'); //class: hide
+        //search_parent.style.display="block";
       } else {
-        search_parent.classList.add('hide');
-        search_parent.classList.remove('show');
+        search_parent.classList.add('d-none');
+        search_parent.classList.remove('d-block');
+        //search_parent.style.display="none";
       }
     });
   }
